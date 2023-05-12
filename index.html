@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire de réservation</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="form-reserver" class="reserver">
+      <h1>Formulaire de réservation</h1>
+      <form>
+        <div id="vide" style="color: red"></div>
+        <br />
+        <!-- Nom -->
+        <label for="form-nom">Votre Nom</label>
+        <input type="text" name="nom" id="form-nom" />
+        <br />
+        <!-- Email -->
+        <label for="form-email">Votre email</label>
+        <input type="email" name="email" id="form-email" />
+        <br />
+        <!-- CIN -->
+        <label for="form-cin">Numero CIN</label>
+        <input type="text" name="cin" id="form-cin" />
+        <br />
+        <!-- Age -->
+        <label for="form-age">Votre age</label>
+        <input type="number" name="age" id="form-age" />
+        <br />
+        <div id="error" style="color: red"></div>
+        <br />
+        <!-- Nombre personnes -->
+        <label for="form-personnes">Nombre de personnes</label>
+        <input type="number" name="personnes" id="form-personnes" />
+        <br />
+        <div id="personne" style="color: red"></div>
+        <!-- Gamme -->
+        <label for="form-gamme">Gamme de chambre</label>
+        <select name="gamme" id="form-gamme">
+          <option value="standard">Standard</option>
+          <option value="prestige">Prestige</option>
+          <option value="platinum">Platinum</option>
+        </select>
+        <br />
+        <!-- Date d'arrivée -->
+        <label for="form-arrival">Date d'arrivée</label>
+        <input type="date" name="arrival" id="form-arrival" />
+        <br />
+        <!-- Date de départ -->
+        <label for="form-depart">Date de départ</label>
+        <input type="date" name="depart" id="form-depart" />
+        <br />
+        <div id="parfait" style="color: red"></div>
+        <br />
+        <!-- Submit -->
+        <button onclick="validateForm()" type="submit" id="submit">
+          Réserver
+        </button>
+      </form>
+    </div>
+
+    <div id="details">
+      <h2>Réservation au nom de : <span id="details-nom"></span></h2>
+      <h3>Informations sur votre réservation</h3>
+      <p>Date de votre arrivée : <span id="details-arrival"></span></p>
+      <p>Date de votre départ : <span id="details-depart"></span></p>
+      <p>Nombre de personnes : <span id="details-nombre"></span></p>
+      <p>Chambre : <span id="details-chambre"></span></p>
+      <p class="background-text">Nous vous souhaitons un excellent séjour !</p>
+    </div>
+
+    <!-- Javascript -->
+    <script src="script.js"></script>
+  </body>
+</html>
